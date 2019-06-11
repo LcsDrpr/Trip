@@ -1,0 +1,121 @@
+nav.navbar{
+  color:white;
+}
+
+body {
+  margin:0;
+  background: linear-gradient(to top, #9d50bb, #6e48aa);
+  min-height: 100vh;
+  width: 100vw;
+  padding-bottom: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+.jumbotron{
+  padding:0;
+}
+.jumbotron_image {
+  background-image: url('../images/photo1.jpg');
+  background-position: bottom;
+  background-size: cover;
+  height: 70vh;
+  padding: 0;
+}
+
+.jumbotron_display {
+  background-color: rgba(0,0,0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.jumbotron_button {
+  width: 200px;
+}
+
+.container_display {
+  margin-top: 50px;
+}
+
+h2 {
+  color: #FFFFFF;
+  margin: 20px;
+}
+
+.card_display {
+  margin-bottom: 30px;
+}
+
+.card_img_display {
+  width: 100%;
+}
+
+/*.card{
+  margin-right:15px;
+}*/
+.card_container_display {
+  margin-top: 50px;
+}
+
+
+h3 {
+  margin-top: 30px;
+  color: #FFFFFF;
+}
+
+.card_text {
+  color: #FFFFFF;
+}
+
+.cardPage h3{
+  /*margin-top:0;*/
+}
+.cardPage .container{
+  padding:50px;
+}
+
+.cardPage img{
+  height:50%;
+}
+
+.cardPage .sous-menu{
+    margin-top:30px;
+    display: flex;
+    justify-content: space-around;
+}
+.cardPage .sous-menu a{
+  padding: 1px 7px 2px;
+  text-decoration: none;
+}
+
+.cardPage .description{
+  color:white;
+}
+
+.newPage form{
+  
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.newPage h2{
+  justify-content: center;
+  display: flex;
+  margin-top:30px;
+}
+
+.newPage form label{
+  margin-top:20px;
+  font-size:20px;
+  /*margin-left:calc((83% - 94px) / 2);*/
+}
+
+.newPage form button{
+  margin-top:20px;
+}
