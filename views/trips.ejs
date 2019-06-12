@@ -33,17 +33,17 @@
   </header>
   <div class="container">
 
-  <% if(travel.length != undefined ){ %>
+  <% if(trips.length != undefined ){ %>
         
     <h2>These are our last wild trips !</h2>
       <div class="card-deck">
-      <% for(i=0;i<travel.length;i++){ %>
+      <% for(i=0;i<trips.length;i++){ %>
         <div class="card" style="width: 18rem;">
-          <img src="<%= travel[i].image %>" class="card-img-top" alt="...">
+          <img src="<%= trips[i].image %>" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title"><%= travel[i].name %></h5>
-            <p class="card-text"><%= travel[i].description.substr(0, 150) %> ...</p>
-            <a href="card?position=<%=i%>" class="btn btn-primary">Discover more ...</a>
+            <h5 class="card-title"><%= trips[i].tripname %></h5>
+            <p class="card-text"><%= trips[i].description.substr(0, 150) %> ...</p>
+            <a href="card?id=<%=trips[i]._id%>" class="btn btn-primary">Discover more ...</a>
           </div>
         </div>
         <% } %>

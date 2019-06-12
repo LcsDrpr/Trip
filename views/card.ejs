@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title><%= travelName %></title>
+  <title><%= trips.tripName %></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/ec49bce93b.js"></script>
   <link rel="stylesheet" href="../stylesheets/style.css">
@@ -34,15 +34,15 @@
 
   <div class="container">
     <div id='cardFocus' class="col-12  d-flex">
-      <img src="<%=travelImg%>" alt="" class='col-6'>
+      <img src="<%=trips.image%>" alt="" class='col-6'>
       <div class="info col-6">
-        <h3 class="title"><%= travelName %></h3>
-        <p class="description"> <%= travelDesc%></p>
+        <h3 class="title"><%= trips.tripName %></h3>
+        <p class="description"> <%= trips.description%></p>
       </div>
     </div>
     <div class="sous-menu col-12">
       <form action="/delete-post" method="POST">
-        <input type="hidden" name ='position' value='<%= position %>'>
+        <input type="hidden" name ='id' value='<%= trips._id %>'>
         <button class="btn-danger" value>Delete</button>
       </form>
       <a href='/trips' class="btn-primary">Retour</a>

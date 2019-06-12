@@ -31,14 +31,26 @@
     </nav>
   </header>
 <div class="container col-12">
-  <h2>Add a New Trip !</h2>
+  <h2>Add a Trip !</h2>
   <form action="/add-trip" method="POST" class="col-10 offset-1">
-    <label for="">Choisissez le nom du trip :</label>
+    <label for="">Choisissez le trip :</label>
     <select name="name" id="" class='col-10'>
       <% for(var i=0; i<deletedTrip.length ; i++){%>
         <option value="<%= deletedTrip[i].name %>"><%= deletedTrip[i].name %></option>
       <%}%>
     </select>
+    <input type="hidden" name='image' value='images/photo1.jpg'>
+    <label for="">Entrez la description de ce voyage :</label>
+    <textarea type="textarea" name="description" class='col-10'></textarea>
+
+    <button class="btn-primary col-1">Valider</button>
+
+  </form>
+
+  <h2>Add a New Trip !</h2>
+  <form action="/new-trip" method="POST" class="col-10 offset-1">
+    <label for="">Choisissez le nom du trip :</label>
+    <input type="text" name="name" id="" class='col-10'>
     <input type="hidden" name='image' value='images/photo1.jpg'>
     <label for="">Entrez la description de ce voyage :</label>
     <textarea type="textarea" name="description" class='col-10'></textarea>
