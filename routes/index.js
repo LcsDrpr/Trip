@@ -39,28 +39,41 @@ router.get('/card', function(req, res, next) {
   res.render('card', {travel,travelName,travelImg,travelDesc,position});
 });
 
+var deletedTrip = [];
+
 router.post('/delete-post', function(req, res, next) {
 
-  console.log(req.body);
+  // console.log(deletedTrip);
+  // console.log(req.body);
+  var positionItem = req.body.position;
+  // console.log(req.body.position);
+  // console.log(positionItem);
+  deletedTrip.push(travel[positionItem]);
   travel.splice(req.body.position,1);
+  //console.log(deletedTrip);
 
   res.render('trips', {travel});
 });
 
-router.post('/delete-post', function(req, res, next) {
 
+
+/*router.post('/delete-post', function(req, res, next) {
+
+  console.log(deletedTrip);
   console.log(req.body);
+  deletedTrip.push(travel.req.body.position);
   travel.splice(req.body.position,1);
+  console.log(deletedTrip);
 
   res.render('trips', {travel});
-});
+});*/
 
 router.get('/new', function(req, res, next) {
 
-  console.log(req.body);
-  travel.splice(req.body.position,1);
-
-  res.render('new', {travel});
+  //console.log(deletedTrip);
+  res.render('new', {travel,deletedTrip});
 });
+
+
 
 module.exports = router;

@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home </a>
+            <a class="nav-link" href="/">Home </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/trips">Trips</a>
@@ -34,7 +34,11 @@
   <h2>Add a New Trip !</h2>
   <form action="/add-trip" method="POST" class="col-10 offset-1">
     <label for="">Choisissez le nom du trip :</label>
-    <input type="text" name="name" class='col-10'>
+    <select name="name" id="" class='col-10'>
+      <% for(var i=0; i<deletedTrip.length ; i++){%>
+        <option value="<%= deletedTrip[i].name %>"><%= deletedTrip[i].name %></option>
+      <%}%>
+    </select>
     <input type="hidden" name='image' value='images/photo1.jpg'>
     <label for="">Entrez la description de ce voyage :</label>
     <textarea type="textarea" name="description" class='col-10'></textarea>
